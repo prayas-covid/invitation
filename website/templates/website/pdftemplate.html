@@ -1,0 +1,151 @@
+{% load static %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:v="urn:schemas-microsoft-com:vml">
+<head>
+<!--[if gte mso 9]><xml><o:OfficeDocumentSettings><o:AllowPNG/><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml><![endif]-->
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="width=device-width" name="viewport"/>
+<!--[if !mso]><!-->
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet"> 
+<!--<![endif]-->
+<title></title>
+
+<body>
+    <style>
+        .invite {
+            overflow-x: hidden; /* For Opera */
+            -webkit-box-shadow:
+                inset #28a2d2 0 0 0 5px;
+            -moz-box-shadow:
+                inset #28a2d2 0 0 0 5px;
+            box-shadow:
+                inset #28a2d2 0 0 0 5px;
+        
+            background-color: #c5e9f8;
+            position: absolute; top: 0; left: 0;
+            height: 100%;
+            width: 100%;
+            margin: 0%;
+        }
+        
+        #logo{
+            max-height: 150px;
+            display: inline-block;
+            padding: 5px 0 0 5px;
+        }
+        
+        #heading{
+            width: 50%;
+            padding-left: 20%;
+            position: relative;
+            top: -20px;
+            font-size: 25px;
+            font-weight: bold;
+        }
+        #leafright{
+            float: right;
+            max-height: 150px;
+            padding: 5px 5px 0 0;
+        }
+        #leafleftbottom{
+            max-height: 150px;
+            float: left;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            padding: 0 0 5px 5px;
+        }
+        #earth{
+            max-height: 350px;
+            float: right;
+            position: relative;
+            top: -255px;
+            right: 70px;
+        }
+        #text{
+            font-family: 'Patrick Hand';
+            padding-left: 10%;
+            font-size: 23px;
+        }
+        #leafrightbottom{
+            max-height: 150px;
+            float: right;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            padding: 0 5px 5px 0;
+        }
+        
+        @media only screen and (max-width: 1128px) {
+            /* For mobile phones: */
+            #earth {
+              display: none;
+            }
+          }
+        
+          @media only screen and (max-width: 960px) {
+            /* For mobile phones: */
+            #leafleftbottom {
+                max-height: 100px;
+                /* float: left; */
+                position: absolute;
+                /* bottom: 0; */
+                left: 0;
+                padding: 0 0 5px 5px;
+            }
+            #leafright{
+                position: absolute;
+                right: 0;
+                top: 0;
+                max-height: 100px;
+            }
+            #leafrightbottom{
+                max-height: 100px;
+            }
+            #logo{
+                max-height: 100px;
+            }
+            #heading{
+                top:20%;
+                position: fixed;
+                left: 10%;
+                text-align: center;
+                font-size: 15px;
+            }
+            #text{
+                position: fixed;
+                top: 25%;
+                font-size: 19px;
+                margin: 2%;
+                padding-left: 5%;
+            }
+          }
+    </style>
+    <div class="invite">
+        <img src="{% static 'images/logo.png' %}" alt="logo" id="logo">
+        <span id="heading">
+            INVITATION CARD
+        </span>
+        <img src="{% static 'images/leafright.png' %}" alt="leftright" id="leafright">
+        <br>
+        <br>
+        <span id="text">
+            Dear {{name}}, <br> <br>
+            You are cordially invited to the Abhyuday's Coordinator's All Team Meet scheduled on <br>
+            World Environment day i.e, June 5, 2021 at 5:06 PM. <br> <br>
+            ___________________ Will also be joining us for the ATM. <br>
+            So mark your calendars for an evening full of fun and exciting activities.
+            <br>
+            Exciting goodies await you!
+        </span>
+        <img src="{% static 'images/Final_Earth.png' %}" alt="Earth" id = "earth">
+        
+        <img src="{% static 'images/leafleftbottom.png' %}" alt="leafleftbottom" id="leafleftbottom">
+        <img src="{% static 'images/leafrightbottom.png' %}" alt="" id="leafrightbottom">
+    </div>
+</body>
+
+</html>

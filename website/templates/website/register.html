@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/register.css'%}">
+    <title>Register</title>
+</head>
+<body>
+
+    <style>
+        .login-box .user-box .error{
+            border-bottom: 1px solid red;
+        }
+        .login-box .user-box input.error:focus ~ label{
+            color: red;
+        }
+
+    </style>
+
+
+    <div class="login-box">
+        <h2>Register</h2>
+        <form method="POST">
+            {% csrf_token %}
+            <div class="user-box">
+                <input type="email" autocomplete="off" name="e" required>
+                <label>email</label>
+            </div>
+            <div class="user-box">
+                <input type="text" autocomplete="off" name="name" required>
+                <label>Name</label>
+            </div>
+            <div class="user-box">
+                <input id="rollNo" type="text" autocomplete="off" name="rollNo" required>
+                <label>Roll Number</label>
+            </div>
+            <div class="user-box">
+                <input id="submit" type="submit">
+                
+            </div>
+        </form>
+    </div>
+
+
+
+    <script>
+        const validateRollNo = (rollNo) => {
+            return rollNo.length === 9 && rollNo.startsWith("20")
+        }
+
+        document.querySelector('#rollNo').addEventListener('keyup', e => {
+            console.log(e.target.value)
+            if(!validateRollNo(e.target.value)){
+                document.querySelector('#rollNo').classList.add('error')
+                document.querySelector('#submit').disabled = true
+            } else{
+                document.querySelector('#rollNo').classList.remove('error')
+                document.querySelector('#submit').disabled = false
+            }
+        });
+    </script>
+</body>
+</html>
