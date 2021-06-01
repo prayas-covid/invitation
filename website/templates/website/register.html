@@ -17,12 +17,50 @@
         .login-box .user-box input.error:focus ~ label{
             color: red;
         }
-
+        .msg{
+            width: 100%;
+            text-align: center;
+            background-color: rgb(122, 150, 82);
+            border-radius: 10px;
+            padding: 10px;
+        }
+        .loader {
+            display: none;
+            align-self: center;
+            border: 6px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 6px solid #3498db;
+            width: 30px;
+            height: 30px;
+            -webkit-animation: spin 2s linear infinite; /* Safari */
+            animation: spin 2s linear infinite;
+          }
+          .loader.false{
+              display: none;
+          }
+          .loader.true{
+              display: block;
+          }
+          
+          /* Safari */
+          @-webkit-keyframes spin {
+            0% { -webkit-transform: rotate(0deg); }
+            100% { -webkit-transform: rotate(360deg); }
+          }
+          
+          @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+          }
     </style>
 
 
     <div class="login-box">
+        {% if message %}
+        <h3 class="msg">Check your mail for invitation</h3>
+        {% endif %}
         <h2>Register</h2>
+        
         <form method="POST">
             {% csrf_token %}
             <div class="user-box">
@@ -42,6 +80,10 @@
                 
             </div>
         </form>
+        <center>
+            <div class="loader"></div>
+
+        </center>
     </div>
 
 
@@ -59,8 +101,13 @@
             } else{
                 document.querySelector('#rollNo').classList.remove('error')
                 document.querySelector('#submit').disabled = false
+
+                document.querySelector('#submit').addEventListener('click', e => {
+                    document.querySelector('.loader').classList.add('{{ spinner }}')
+                })
             }
         });
+
     </script>
 </body>
 </html>

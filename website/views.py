@@ -22,6 +22,7 @@ def save_pdf(file, filename):
         destination.write(file)
 
 def register(request):
+    context = {'spinner': 'true'}
     if request.method == 'POST':
         email = request.POST.get('e')
         name = request.POST.get('name')
@@ -41,6 +42,7 @@ def register(request):
         msg.attach_alternative(html_content, "text/html")
         msg.attach_file(os.path.join(settings.MEDIA_ROOT, f'{name}{rollNo}.pdf'))
         msg.send()
+        context = {'message': "check your mail for invitation card!!", 'spinner': 'false'}
 
 
-    return render(request, 'website/register.html')
+    return render(request, 'website/register.html', context=context)
