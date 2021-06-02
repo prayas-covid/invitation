@@ -41,16 +41,16 @@ def register(request):
         htmly = get_template('website/mailtemplate.html')
         d = { 'name': name }
 
-        pdf = render_to_pdf('website/pdftemplate.html', { 'name': name })
-        pdf_bytes = pdf.content
-        save_pdf(pdf_bytes, f'{name}{rollNo}.pdf')
+        # pdf = render_to_pdf('website/pdftemplate.html', { 'name': name })
+        # pdf_bytes = pdf.content
+        # save_pdf(pdf_bytes, f'{name}{rollNo}.pdf')
 
-        subject, from_email, to = 'Invitation', 'abhyudayinvite@gmail.com', email
+        subject, from_email, to = 'Invitation Abhyuday\'s Coordie ATM 2021', 'abhyudayinvite@gmail.com', email
         text_content = 'You are invited'
         html_content = htmly.render(d)
         msg = EmailMultiAlternatives(subject, text_content, from_email, [to])
         msg.attach_alternative(html_content, "text/html")
-        msg.attach_file(os.path.join(settings.MEDIA_ROOT, f'{name}{rollNo}.pdf'))
+        # msg.attach_file(os.path.join(settings.MEDIA_ROOT, f'{name}{rollNo}.pdf'))
         msg.send()
         context = {'message': "check your mail for invitation card!!", 'spinner': 'false'}
 

@@ -14,206 +14,102 @@
 <title></title>
 
 <body>
-    <!-- <style>
-        .invite {
-            overflow-x: hidden; /* For Opera */
-            -webkit-box-shadow:
-                inset #28a2d2 0 0 0 5px;
-            -moz-box-shadow:
-                inset #28a2d2 0 0 0 5px;
-            box-shadow:
-                inset #28a2d2 0 0 0 5px;
-        
-            background-color: #c5e9f8;
-            position: absolute; top: 0; left: 0;
-            height: 100%;
-            width: 100%;
-            margin: 0%;
-        }
-        
-        #logo{
-            max-height: 150px;
-            display: inline-block;
-            padding: 5px 0 0 5px;
-        }
-        
-        #heading{
-            width: 50%;
-            padding-left: 20%;
-            position: relative;
-            top: -20px;
-            font-size: 25px;
-            font-weight: bold;
-        }
-        #leafright{
-            float: right;
-            max-height: 150px;
-            padding: 5px 5px 0 0;
-        }
-        #leafleftbottom{
-            max-height: 150px;
-            float: left;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            padding: 0 0 5px 5px;
-        }
-        #earth{
-            max-height: 350px;
-            float: right;
-            position: relative;
-            top: -255px;
-            right: 70px;
-        }
-        #text{
-            font-family: 'Patrick Hand';
-            padding-left: 10%;
-            font-size: 23px;
-        }
-        #leafrightbottom{
-            max-height: 150px;
-            float: right;
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            padding: 0 5px 5px 0;
-        }
-        
-        @media only screen and (max-width: 1128px) {
-            /* For mobile phones: */
-            #earth {
-              display: none;
-            }
-          }
-        
-          @media only screen and (max-width: 960px) {
-            /* For mobile phones: */
-            #leafleftbottom {
-                max-height: 100px;
-                /* float: left; */
-                position: absolute;
-                /* bottom: 0; */
-                left: 0;
-                padding: 0 0 5px 5px;
-            }
-            #leafright{
-                position: absolute;
-                right: 0;
-                top: 0;
-                max-height: 100px;
-            }
-            #leafrightbottom{
-                max-height: 100px;
-            }
-            #logo{
-                max-height: 100px;
-            }
-            #heading{
-                top:20%;
-                position: fixed;
-                left: 10%;
-                text-align: center;
-                font-size: 15px;
-            }
-            #text{
-                position: fixed;
-                top: 25%;
-                font-size: 19px;
-                margin: 2%;
-                padding-left: 5%;
-            }
-          }
-    </style>
-    <div class="invite">
-        <img src="https://github.com/prayas-covid/invitation/blob/master/website/static/images/logo.png?raw=true" alt="logo" id="logo">
-        <span id="heading">
-            INVITATION CARD
-        </span>
-        <img src="https://github.com/prayas-covid/invitation/blob/master/website/static/images/leafright.png?raw=true" alt="leftright" id="leafright">
-        <br>
-        <br>
-        <span id="text">
-            Dear {{name}}, <br> <br>
-            You are cordially invited to the Abhyuday's Coordinator's All Team Meet scheduled on <br>
-            World Environment day i.e, June 5, 2021 at 5:06 PM. <br> <br>
-            ___________________ Will also be joining us for the ATM. <br>
-            So mark your calendars for an evening full of fun and exciting activities.
-            <br>
-            Exciting goodies await you!
-        </span>
-        <img src="https://github.com/prayas-covid/invitation/blob/master/website/static/images/Final_Earth.png?raw=true" alt="Earth" id = "earth">
-        
-        <img src="https://github.com/prayas-covid/invitation/blob/master/website/static/images/leafleftbottom.png?raw=true" alt="leafleftbottom" id="leafleftbottom">
-        <img src="https://github.com/prayas-covid/invitation/blob/master/website/static/images/leafrightbottom.png?raw=true" alt="" id="leafrightbottom">
-    </div> -->
-
     <style>
-        
-        .tg  {border:none;border-collapse:collapse;border-spacing:0;}
-        .tg td{border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
-        .tg th{border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-        .tg .tg-6oqw{background-color:#c5e9f8;border-color:inherit;font-family:"Trebuchet MS", Helvetica, sans-serif !important;font-size:22px;text-align:center;vertical-align:top}
-        .tg .tg-i2ax{background-color:#c5e9f8;border-color:inherit;text-align:left;vertical-align:top}
-        .tg .tg-gh04{background-color:#c5e9f8;border-color:inherit;text-align:right;vertical-align:top}
-        .tg .tg-yv5t{background-color:#c5e9f8;border-color:inherit;font-family:"Trebuchet MS", Helvetica, sans-serif !important;text-align:left;vertical-align:top}
+        .table{
+            color: #fff !important;
+            font-family: "Patrick Hand", Arial, Helvetica, sans-serif !important;
+            border: 10px solid #DAA520;
+        }
+        .btn{
+          padding: 10px;
+          border: none;
+          outline: none;
+          background-color: #28282B;
+          color: #fff;
+          cursor: pointer;
+        }
+        .tg  {border:none;border-collapse:collapse;border-spacing:0;width: 100%;}
+        .tg td{border-style:solid;border-width:0px;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
+        .tg th{border-style:solid;border-width:0px;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+        .tg .tg-6oqw{background-color:#28282B;border-color:inherit;font-size:22px;text-align:center;vertical-align:top}
+        .tg .tg-i2ax{background-color:#28282B;border-color:inherit;text-align:left;vertical-align:top}
+        .tg .tg-gh04{background-color:#28282B;border-color:inherit;text-align:right;vertical-align:top}
+        .tg .tg-yv5t{background-color:#28282B;border-color:inherit;text-align:left;vertical-align:top}
           
     </style>
-        <table class="tg">
-        <thead>
-          <tr>
-            <th class="tg-i2ax" colspan="3" rowspan="2"><img src="https://github.com/prayas-covid/invitation/blob/master/website/static/images/logo.png?raw=true" alt="logo" width="131" height="87"></th>
-            <th class="tg-i2ax"></th>
-            <th class="tg-i2ax"></th>
-            <th class="tg-i2ax"></th>
-            <th class="tg-gh04" colspan="6" rowspan="2"><img src="https://github.com/prayas-covid/invitation/blob/master/website/static/images/leafright.png?raw=true" alt="leafright" width="131" height="87"></th>
-          </tr>
-          <tr>
-            <td class="tg-6oqw" colspan="3"><span style="color:#6665CD">INVITATION CARD</span></td>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="tg-i2ax"></td>
-            <td class="tg-i2ax"></td>
-            <td class="tg-i2ax"></td>
-            <td class="tg-i2ax"></td>
-            <td class="tg-i2ax"></td>
-            <td class="tg-i2ax"></td>
-            <td class="tg-i2ax"></td>
-            <td class="tg-i2ax"></td>
-            <td class="tg-i2ax"></td>
-            <td class="tg-i2ax"></td>
-            <td class="tg-i2ax"></td>
-            <td class="tg-i2ax"></td>
-          </tr>
-          <tr>
-            <td class="tg-i2ax"></td>
-            <td class="tg-yv5t" colspan="7">Dear {{name}},<br><br>You are cordially invited to the Abhyuday's Coordinator's All Team Meet scheduled on <br>World Environment day i.e, June 5, 2021 at 5:06 PM.<br>Rahul Will also be joining us for the ATM. <br>So mark your calendars for an evening full of fun and exciting activities. <br>Exciting goodies await you!<br><br></td>
-            <td class="tg-i2ax"></td>
-            <td class="tg-i2ax"></td>
-            <td class="tg-i2ax"><img src="https://github.com/prayas-covid/invitation/blob/master/website/static/images/Final_Earth.png?raw=true" alt="leafright" width="151" height="151"></td>
-            <td class="tg-i2ax"></td>
-          </tr>
-          <tr>
-            <td class="tg-i2ax" colspan="2" rowspan="2"><img src="https://github.com/prayas-covid/invitation/blob/master/website/static/images/leafleftbottom.png?raw=true" alt="leafright" width="131" height="87"></td>
-            <td class="tg-i2ax"></td>
-            <td class="tg-i2ax"></td>
-            <td class="tg-i2ax"></td>
-            <td class="tg-i2ax"></td>
-            <td class="tg-i2ax"></td>
-            <td class="tg-i2ax"></td>
-            <td class="tg-gh04" colspan="4" rowspan="2"><img src="https://github.com/prayas-covid/invitation/blob/master/website/static/images/leafrightbottom.png?raw=true" alt="leafright" width="131" height="87"></td>
-          </tr>
-          <tr>
-            <td class="tg-i2ax"></td>
-            <td class="tg-i2ax"></td>
-            <td class="tg-i2ax"></td>
-            <td class="tg-i2ax"></td>
-            <td class="tg-i2ax"></td>
-            <td class="tg-i2ax"></td>
-          </tr>
-        </tbody>
-        </table>
+        <p>“Every adventure requires a first step”
+          Know more about the Abhyuday family and take your first step on joining us this year
+          Coordie ATM will be conducted via ms teams please join using the link below or the team code
+          <br><br>
+          Hoping to see you there ❤️
+          <br><br>
+
+          <a href="https://teams.microsoft.com/l/team/19%3ae-WS9T5gPZro15SuNbh0PJEEGbPodexakFQXKp6J-eo1%40thread.tacv2/conversations?groupId=be644415-a1f2-4485-a513-154211a2d4e4&tenantId=403ee5f4-55b3-45cd-8ae2-824be887a075">
+            <button class="btn">Coordie ATM Team Joining link</button>
+          </a> <br><br>
+          Team Code: aol6o1c
+          <br><br><br>
+          </p>
+
+        <div class="table">
+
+          <table class="tg">
+          <thead>
+            <tr>
+              <th class="tg-i2ax" colspan="3" rowspan="2"><img src="https://github.com/prayas-covid/invitation/blob/master/website/static/images/abhy.png?raw=true" alt="logo" width="131" height="87"></th>
+              <th class="tg-i2ax"></th>
+              <th class="tg-i2ax"></th>
+              <th class="tg-i2ax"></th>
+              <th class="tg-gh04" colspan="6" rowspan="2"></th>
+            </tr>
+            <tr>
+              <td class="tg-6oqw" colspan="3"><span style="color:#fff; font-size: 30px !important;">INVITATION CARD</span></td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="tg-i2ax"></td>
+              <td class="tg-i2ax"></td>
+              <td class="tg-i2ax"></td>
+              <td class="tg-i2ax"></td>
+              <td class="tg-i2ax"></td>
+              <td class="tg-i2ax"></td>
+              <td class="tg-i2ax"></td>
+              <td class="tg-i2ax"></td>
+              <td class="tg-i2ax"></td>
+              <td class="tg-i2ax"></td>
+              <td class="tg-i2ax"></td>
+              <td class="tg-i2ax"></td>
+            </tr>
+            <tr>
+              <td class="tg-i2ax"></td>
+              <td class="tg-yv5t" colspan="7">Dear {{name}},<br><br>You are cordially invited to <b>Abhyuday Coordinator’s All Team Meet</b> scheduled on this World Environment Day, <b>5th June, 2021</b> at <b>5:00 p.m</b> <br>Mark your calendars for an eventful evening  full of fun and amazing activities.Join in to hear the mesmerizing voice of <b>Kailash Kher.</b> <br> Exciting goodies and A <b>big surprise</b> awaits you!!<br><br></td>
+              <td class="tg-i2ax"></td>
+              <td class="tg-i2ax"></td>
+              <td class="tg-i2ax"><img src="https://github.com/prayas-covid/invitation/blob/master/website/static/images/Final_Earth.png?raw=true" alt="leafright" width="270" height="270"></td>
+              <td class="tg-i2ax"></td>
+            </tr>
+            <tr>
+              <td class="tg-i2ax" colspan="2" rowspan="2"></td>
+              <td class="tg-i2ax"></td>
+              <td class="tg-i2ax"></td>
+              <td class="tg-i2ax"></td>
+              <td class="tg-i2ax"></td>
+              <td class="tg-i2ax"></td>
+              <td class="tg-i2ax"></td>
+              <td class="tg-gh04" colspan="4" rowspan="2"></td>
+            </tr>
+            <tr>
+              <td class="tg-i2ax"></td>
+              <td class="tg-i2ax"></td>
+              <td class="tg-i2ax"></td>
+              <td class="tg-i2ax"></td>
+              <td class="tg-i2ax"></td>
+              <td class="tg-i2ax"></td>
+            </tr>
+          </tbody>
+          </table>
+        </div>
 </body>
 
 </html>

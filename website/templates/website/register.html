@@ -7,8 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/register.css'%}">
     <title>Register</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon' %}/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon' %}/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon' %}/favicon-16x16.png">
+    <link rel="manifest" href="{% static 'favicon' %}/site.webmanifest">
 </head>
 <body>
+    <style>
+        body{
+            color: #f3f3f3;
+            background-size: cover;
+            background-position: center;
+        }
+
+    </style>
 
     <style>
         .login-box .user-box .error{
@@ -80,11 +92,7 @@
                 <label>Roll Number</label>
             </div>
 
-            <style>
-                body{
-                    color: #f3f3f3;
-                }
-            </style>
+            
 
             <h3>Will you be attending Abhyuday's Coordie ATM 2021?</h3>
             <input type="radio" id="Yes" name="coming" value="Yes">
