@@ -12,7 +12,7 @@ import os
 from io import BytesIO
 from xhtml2pdf import pisa
 from invitations.utils import render_to_pdf
-
+from .models import Attendee
 def home(request):
     return render(request, 'website/index.html')
 
@@ -27,6 +27,16 @@ def register(request):
         email = request.POST.get('e')
         name = request.POST.get('name')
         rollNo = request.POST.get('rollNo')
+        phone = request.POST.get('phone')
+        coming = request.POST.get('coming')
+
+        Attendee.objects.create(
+            name=name,
+            email=email,
+            rollNo=rollNo,
+            phone=phone,
+            coming=coming
+        )
 
         htmly = get_template('website/mailtemplate.html')
         d = { 'name': name }

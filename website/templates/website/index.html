@@ -13,6 +13,18 @@
 
   <link rel="stylesheet" href="{% static 'css/invite.css' %}">
 
+  <style>
+    .btn{
+      background-color: brown;
+      color: #fff;
+      padding: 10px;
+      font-size: 1.5rem;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
   <div class="center">
@@ -21,24 +33,49 @@
         <h1><span>ABHYUDAY</span><br>Coordinators' All Team Meet</h1>
       </div>
       <div id="clock"></div>
+
+      <a href="{% url 'register' %}"><button class="btn">Register Now</button></a>
     </div>
   </div>
 
-  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 
-  <script src='{% static "js/countdown.js" %}'></script>
-
-  <script type="text/javascript">
-    $('#clock').countdown('2021/6/5', function(event){
-      var $this = $(this).html(event.strftime(''
-      +'<div><span>%w</span><span>Week</span></div>'
-      +'<div><span>%d</span><span>Days</span></div>'
-      +'<div><span>%H</span><span>Hr</span></div>'
-      +'<div><span>%M</span><span>Min</span></div>'
-      +'<div><span>%S</span><span>Sec</span></div>'
-      ))
-    })
-  </script>
+  <script>
+    // Set the date we're counting down to
+    var countDownDate = new Date("June 5, 2021 17:00:00").getTime();
+    
+    // Update the count down every 1 second
+    var x = setInterval(function() {
+    
+      // Get today's date and time
+      var now = new Date().getTime();
+    
+      // Find the distance between now and the count down date
+      var distance = countDownDate - now;
+    
+      // Time calculations for days, hours, minutes and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+      // Display the result in the element with id="demo"
+      document.getElementById("clock").innerHTML = 
+      `
+      <div><span>0</span><span>Weeks</span></div>
+      <div><span>${days}</span><span>days</span></div>
+      <div><span>${hours}</span><span>Hr</span></div>
+      <div><span>${minutes}</span><span>Min</span></div>
+      <div><span>${seconds}</span><span>Sec</span></div>
+      `
+    
+      // If the count down is finished, write some text
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("clock").innerHTML = "EXPIRED";
+      }
+    }, 1000);
+    </script>
+  
 
 </body>
 </html>
