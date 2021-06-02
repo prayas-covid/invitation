@@ -18,6 +18,7 @@
             color: #f3f3f3;
             background-size: cover;
             background-position: center;
+            
         }
 
     </style>
@@ -71,13 +72,13 @@
         {% if message %}
         <h3 class="msg">Check your mail for invitation</h3>
         {% endif %}
-        <h2>Register</h2>
+        <h2>REGISTER</h2>
         
         <form method="POST">
             {% csrf_token %}
             <div class="user-box">
                 <input type="email" autocomplete="off" name="e" required>
-                <label>email</label>
+                <label>Gmail id</label>
             </div>
             <div class="user-box">
                 <input type="text" autocomplete="off" name="name" required>
@@ -98,7 +99,7 @@
             <input type="radio" id="Yes" name="coming" value="Yes">
             <label for="male">Yes</label><br>
             <input type="radio" id="yesss" name="coming" value="yesss">
-            <label for="female">yesss</label><br>
+            <label for="female">Yesss</label><br>
             <input type="radio" id="Yessssssss" name="coming" value="Yessssssss">
             <label for="other">Yessssssss</label>
 
