@@ -75,23 +75,29 @@
         <h2>REGISTER</h2>
         
         <form method="POST">
+
             {% csrf_token %}
-            <div class="user-box">
-                <input type="email" autocomplete="off" name="e" required>
-                <label>Gmail id</label>
-            </div>
+
             <div class="user-box">
                 <input type="text" autocomplete="off" name="name" required>
                 <label>Name</label>
             </div>
-            <div class="user-box">
-                <input id="phone" type="text" autocomplete="off" name="phone" required>
-                <label>Whatsapp Number</label>
-            </div>
+
             <div class="user-box">
                 <input id="rollNo" type="text" autocomplete="off" name="rollNo" required>
                 <label>Roll Number</label>
             </div>
+
+            <div class="user-box">
+                <input type="email" autocomplete="off" name="e" required>
+                <label>Personal Gmail ID</label>
+            </div>
+           
+            <div class="user-box">
+                <input id="phone" type="text" autocomplete="off" name="phone" required>
+                <label>Whatsapp Number</label>
+            </div>
+            
 
             
 
