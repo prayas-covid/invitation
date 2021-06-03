@@ -44,11 +44,12 @@ body {
     background: transparent;
 }
 .login-box .user-box input[type=submit]{
-    margin-top: 20px;
+    margin-top: 40px;
+    margin-left: 78px;
     cursor: pointer;
     border: none;
     width: 50%;
-    background-color: #243b55;
+    background-color: #e91e63;
     color: #fff;
 }
 .login-box .user-box label {
