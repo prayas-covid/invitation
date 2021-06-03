@@ -65,6 +65,14 @@
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
           }
+
+          .feedback{
+              position: absolute;
+              bottom: 0;
+              font-size: 0.8rem;
+              color: red;
+              display: none;
+          }
     </style>
 
 
@@ -84,6 +92,7 @@
             </div>
 
             <div class="user-box">
+                <p class="feedback">Invalid roll no.. registration open only for freshies</p>
                 <input id="rollNo" type="text" autocomplete="off" name="rollNo" required>
                 <label>Roll Number</label>
             </div>
@@ -126,13 +135,15 @@
         const validateRollNo = (rollNo) => {
             return rollNo.length === 9 && rollNo.startsWith("20")
         }
-
+        const feedback = document.querySelector('.feedback')
         document.querySelector('#rollNo').addEventListener('keyup', e => {
             console.log(e.target.value)
             if(!validateRollNo(e.target.value)){
+                feedback.style.display = 'block'
                 document.querySelector('#rollNo').classList.add('error')
                 document.querySelector('#submit').disabled = true
             } else{
+                feedback.style.display = 'none'
                 document.querySelector('#rollNo').classList.remove('error')
                 document.querySelector('#submit').disabled = false
 
